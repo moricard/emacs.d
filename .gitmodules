@@ -1,3 +1,6 @@
-[submodule "solarized-colors"]
-	path = solarized-colors
+[submodule "modules/solarized-colors"]
+	path = modules/solarized-colors
 	url = git://github.com/sellout/emacs-color-theme-solarized.git
+[submodule "modules/yasnippet"]
+	path = modules/yasnippet
+	url = git://github.com/capitaomorte/yasnippet.git
