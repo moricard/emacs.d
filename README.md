@@ -64,5 +64,3 @@ in the browser directly from the editor seems nice too:
 * Python
   I mainly use IPython for machine learning experimentation. The IPython repl
 should not be too hard to bind to using something like Slime.
-
-
