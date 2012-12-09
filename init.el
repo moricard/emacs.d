@@ -3,8 +3,18 @@
 		 (or (buffer-file-name) load-file-name)))
 (add-to-list 'load-path emacs-dir)
 
+;; Modules directory
+(setq modules-dir (file-name-directory
+		   (concat emacs-dir "modules/")))
+(dolist (f (directory-files
+	    (file-name-directory
+	     (concat emacs-dir "modules/")) t "[^.]"))
+  (add-to-list 'load-path f))
 
-;;Appearance
+;; ----------
+;; Appearance
+;; ----------
+
 ;; Solarized colors
 (add-to-list 'custom-theme-load-path "~/.emacs.d/modules/solarized-colors")
 (load-theme 'solarized-dark t)
@@ -24,11 +34,21 @@
 ;; Ditch them scrollbars
 (scroll-bar-mode -1)
 
-
-
+;; ------------
+;; Custom files
+;; ------------
 
 ;; Default behavior
 (require 'default-behavior) 
+
+
+;; ----------------
+;; Packages/modules
+;; ----------------
+
+;; Yasnippets
+(require 'yasnippet)
+(yas-global-mode 1)
 
 
 
