@@ -3,6 +3,13 @@
 		 (or (buffer-file-name) load-file-name)))
 (add-to-list 'load-path emacs-dir)
 
+;; Packages
+(require 'package)
+(add-to-list 'package-archives 
+    '("marmalade" .
+      "http://marmalade-repo.org/packages/"))
+(package-initialize)
+
 ;; Modules directory
 (setq modules-dir (file-name-directory
 		   (concat emacs-dir "modules/")))
@@ -14,10 +21,6 @@
 ;; ----------
 ;; Appearance
 ;; ----------
-
-;; Solarized colors
-(add-to-list 'custom-theme-load-path "~/.emacs.d/modules/solarized-colors")
-(load-theme 'solarized-dark t)
 
 ;; Highlight current line
 (global-hl-line-mode 1)
@@ -45,15 +48,8 @@
 ;; ----------------
 ;; Packages/modules
 ;; ----------------
-
-;; Yasnippets
-(require 'yasnippet)
-(yas-global-mode 1)
-
-
-
-
-
+(require 'color-theme)
+(require 'cyberpunk)
 
 
 (custom-set-variables
