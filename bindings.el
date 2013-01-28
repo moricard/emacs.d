@@ -132,10 +132,6 @@
 ;;use delete-horizontal-space to completely nuke all whitespace
 (global-set-key (kbd "M-SPC ")   'live-delete-whitespace-except-one)
 
-;;make ^h delete rather than help
-(global-set-key (kbd "C-h") 'delete-backward-char)
-(define-key paredit-mode-map (kbd "C-h") 'paredit-backward-delete)
-
 ;;redefine help shortcut
 (global-set-key (kbd "M-h") 'help-command)
 
@@ -202,6 +198,7 @@
 (global-set-key (kbd "C-x C-m") 'execute-extended-command)
 
 ;; Magit
+(require 'magit)
 (global-set-key (kbd "C-x g") 'magit-status)
 
 ;; Activate occur easily inside isearch
@@ -211,6 +208,7 @@
       (occur (if isearch-regexp isearch-string (regexp-quote isearch-string))))))
 
 ;; Ace jump mode
+(require 'ace-jump-mode)
 (global-set-key (kbd "C-o") 'ace-jump-mode)
 
 ;; Show documentation/information with M-RET

@@ -21,17 +21,25 @@
 (setq is-osx (equal system-type 'darwin))
 
 ;; Packages/modules
-(require 'package)
-(add-to-list 'package-archives 
-    '("marmalade" .
-      "http://marmalade-repo.org/packages/"))
-(package-initialize)
+(require 'setup-packages)
+(lazy-install
+      'yasnippet
+      'color-theme
+      'magit 	
+      'paredit
+      'undo-tree
+      'clojure-mode
+      'nrepl
+      'ido-ubiquitous
+      'ace-jump-mode
+      'js2-mode)
 
-(require 'yasnippet)        ; Snippets
-(yas-global-mode 1)
+(eval-after-load 'yasnippet (yas-global-mode 1))
+(yas/load-directory (expand-file-name "snippets" user-emacs-directory))
 
-(require 'color-theme)      ; Color-themes manager
-(color-theme-cyberpunk)
+;; Visual
+(require 'appearance)
+(eval-after-load 'color-theme (color-theme-cyberpunk))
 
 (require 'magit)
 (require 'paredit)
@@ -39,16 +47,14 @@
 (require 'clojure-mode)
 (require 'nrepl)
 
-;; installed
-; nrepl
-; clojure-mode
-
 ;; Setup
 (require 'default-behavior)
-(require 'bindings)
-(require 'appearance)
 (require 'setup-ido)
+(require 'setup-js2-mode)
 
+
+
+(require 'bindings)
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.

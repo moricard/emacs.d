@@ -198,3 +198,5 @@
 ; '(ediff-odd-diff-A ((((class color)) nil)))
 ; '(ediff-odd-diff-B ((((class color)) nil)))
  )
+
+(provide 'cyberpunk)

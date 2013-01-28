@@ -1,4 +1,6 @@
 ;; Appearance
+(require 'cyberpunk)
+;(color-theme-cyberpunk) ;; Nice dark high-contrast color-theme
 
 (global-hl-line-mode 1) ;; Highlight current line
 (show-paren-mode 1)     ;; Parentheses highlight
