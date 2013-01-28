@@ -1,8 +1,5 @@
 ;; Default behavior
 
-;; Command key is meta
-
-
 ;; Allow pasting selection outside of Emacs
 (setq x-select-enable-clipboard t)
 
@@ -16,22 +13,18 @@
 ;; Show keystrokes in progress
 (setq echo-keystrokes 0.1)
 
-;; No splash screen please ... jeez
-(setq inhibit-startup-message t)
-
 ;; Move files to trash when deleting
 (setq delete-by-moving-to-trash t)
-
 
 ;; Answering just 'y' or 'n' will do
 (defalias 'yes-or-no-p 'y-or-n-p)
 
 ;; UTF-8 please
-(setq locale-coding-system 'utf-8) ; pretty
-(set-terminal-coding-system 'utf-8) ; pretty
-(set-keyboard-coding-system 'utf-8) ; pretty
-(set-selection-coding-system 'utf-8) ; please
-(prefer-coding-system 'utf-8) ; with sugar on top
+(setq locale-coding-system   'utf-8)
+(set-terminal-coding-system  'utf-8)
+(set-keyboard-coding-system  'utf-8)
+(set-selection-coding-system 'utf-8)
+(prefer-coding-system	     'utf-8) 	 
 
 ;; Show active region
 (transient-mark-mode 1)
@@ -43,7 +36,7 @@
 (delete-selection-mode 1)
 
 ;; Always display line and column numbers
-(setq line-number-mode t)
+(setq line-number-mode   t)
 (setq column-number-mode t)
 
 ;; Lines should be 80 characters wide, not 72

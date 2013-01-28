@@ -1,56 +1,53 @@
-;; Set path to .emacs.d
-(setq emacs-dir (file-name-directory
-		 (or (buffer-file-name) load-file-name)))
-(add-to-list 'load-path emacs-dir)
+;; Marc-Olivier Ricard 2013
 
-;; Packages
+;; No Splash
+(setq inhibit-startup-message t)
+
+;; Files and Directories
+(setq site-lisp-dir
+      (expand-file-name "site-lisp" user-emacs-directory))
+
+(setq modules-dir 
+      (file-name-directory 
+       (concat user-emacs-directory "modules/")))
+
+(dolist (module (directory-files modules-dir t "[^.]"))
+  (add-to-list 'load-path module))
+
+(add-to-list 'load-path user-emacs-directory)
+(add-to-list 'load-path site-lisp-dir)
+
+;; OSX or linux?
+(setq is-osx (equal system-type 'darwin))
+
+;; Packages/modules
 (require 'package)
 (add-to-list 'package-archives 
     '("marmalade" .
       "http://marmalade-repo.org/packages/"))
 (package-initialize)
 
-;; Modules directory
-(setq modules-dir (file-name-directory
-		   (concat emacs-dir "modules/")))
-(dolist (f (directory-files
-	    (file-name-directory
-	     (concat emacs-dir "modules/")) t "[^.]"))
-  (add-to-list 'load-path f))
+(require 'yasnippet)        ; Snippets
+(yas-global-mode 1)
 
-;; ----------
-;; Appearance
-;; ----------
+(require 'color-theme)      ; Color-themes manager
+(color-theme-cyberpunk)
 
-;; Highlight current line
-(global-hl-line-mode 1)
+(require 'magit)
+(require 'paredit)
+(require 'undo-tree)
+(require 'clojure-mode)
+(require 'nrepl)
 
-;; Highlight matching parentheses when the point is on them.
-(show-paren-mode 1)
+;; installed
+; nrepl
+; clojure-mode
 
-;; No menu bars
-(menu-bar-mode -1)
-
-(when window-system
-  (setq frame-title-format '(buffer-file-name "%f" ("%b"))))
-
-;; Ditch them scrollbars
-(scroll-bar-mode -1)
-
-;; ------------
-;; Custom files
-;; ------------
-
-;; Default behavior
-(require 'default-behavior) 
-
-
-;; ----------------
-;; Packages/modules
-;; ----------------
-(require 'color-theme)
-(require 'cyberpunk)
-
+;; Setup
+(require 'default-behavior)
+(require 'bindings)
+(require 'appearance)
+(require 'setup-ido)
 
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
