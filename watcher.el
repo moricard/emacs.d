@@ -1,8 +1,7 @@
-;; Cyberpunk Colour Theme
+;; Watcher Color Theme
 ;;
-;; "and he'd still see the matrix in his sleep, bright lattices of logic
-;; unfolding across that colorless void..."
-;;                   William Gibson, Neuromancer.
+;; Inspired by Darcula from intelliJ Idea 12 and Cyberpunk from Sam Aaron.
+;; 
 ;;
 
 (require 'color-theme)
@@ -20,7 +19,7 @@
       (foreground-color . "#cccccc")
       (mouse-color . "sienna1"))
 
-     (default ((t (:background "black" :foreground "light gray"))))
+     (default ((t (:background "#222222" :foreground "light gray"))))
      (blue ((t (:foreground "blue"))))
      (bold ((t (:bold t))))
      (bold-italic ((t (:bold t))))
@@ -28,12 +27,12 @@
      (buffers-tab ((t (:background "#0C1021" :foreground "#F8F8F8"))))
 
 
-     (font-lock-builtin-face ((t (:foreground "#FF6400"))))
+     (font-lock-builtin-face ((t (:foreground "#ccff66"))))
      (font-lock-comment-face ((t (:italic t :foreground "#669966"))))
      (font-lock-constant-face ((t (:foreground "#4c83ff"))))
-     (font-lock-doc-string-face ((t (:foreground "DarkOrange"))))
+     (font-lock-doc-string-face ((t (:foreground "#ccff66"))))
      (font-lock-function-name-face ((t (:foreground "deep pink"))))
-     (font-lock-keyword-face ((t (:foreground "#ccff66"))))
+     (font-lock-keyword-face ((t (:foreground "#ff6444"))))
      (font-lock-preprocessor-face ((t (:foreground "gray57"))))
      (font-lock-reference-face ((t (:foreground "medium slate blue"))))
      (font-lock-reference-face ((t (:foreground "gray"))))
@@ -52,24 +51,23 @@
      (highlight ((t (:background "DarkOrange"))))
      (isearch ((t (:background "deep pink" :foreground "black"))))
      (isearch-fail ((t (:background "red4" :foreground "black"))))
-     (lazy-highlight ((t (:background "#444444" :foreground "#ff6400"))))
+     (lazy-highlight ((t (:background "#555555" :foreground "#ff6444"))))
      (query-replace ((t (:background "#444444"))))
      (Highline-face ((t (:background "SeaGreen"))))
-     (hl-line ((t (:background "#333333"))))
+     (hl-line ((t (:background "#442220"))))
      (italic ((t (nil))))
      (left-margin ((t (nil))))
      (text-cursor ((t (:background "yellow" :foreground "black"))))
      (toolbar ((t (nil))))
      (underline ((nil (:underline nil))))
      (vertical-border ((t (:background "black" :foreground "#333333"))))
-     (zmacs-region ((t (:background "snow" :foreground "ble"))))
 
-     (diff-added ((t (:foreground "green"))))
-     (diff-removed ((t (:foreground "red"))))
+     (diff-added ((t (:foreground "#669966"))))
+     (diff-removed ((t (:foreground "red4"))))
 
-     (magit-diff-add ((t (:foreground "green"))))
-     (magit-diff-del ((t (:foreground "red"))))
-     (magit-item-highlight ((t (:background "gray15"))))
+     (magit-diff-add ((t (:foreground "#669966"))))
+     (magit-diff-del ((t (:foreground "red4"))))
+     (magit-item-highlight ((t (:background "#444444"))))
      (magit-section-title ((t (:foreground "deep pink"))))
      (magit-diff-hunk-header ((t (:foreground "orange"))))
      (magit-branch ((t (:foreground "gold"))))
@@ -100,8 +98,8 @@
      (naeu-red-face ((t (:foreground "orange" :background "black"))))
      (naeu-grey-face ((t (:foreground "gray30" :background "black"))))
 
-     (ido-first-match ((t (:foreground "deep pink" :background "black"))))
-     (ido-only-match ((t (:foreground "deep pink" :background "black"))))
+     (ido-first-match ((t (:foreground "deep pink" :background "#222222"))))
+     (ido-only-match ((t (:foreground "deep pink" :background "#222222"))))
      (ido-subdir ((t (:foreground "gray60" :background "black"))))
      (ido-indicator ((t (:foreground "black" :background "deep pink"))))
 
@@ -125,9 +123,6 @@
      (erc-notice-face ((t (:bold t :foreground "grey26"))))
 
      (erc-action-face ((t (:foreground "#FF6400"))))
-;;     (erc-bold-face ((t (:bold t :weight bold))))
-;;     (erc-button ((t (:bold t :weight bold))))
-;;     (erc-command-indicator-face ((t (:bold t :weight bold))))
      (erc-current-nick-face ((t (:foreground "#FBDE2D"))))
      (erc-dangerous-host-face ((t (:foreground "red"))))
      (erc-default-face ((t (:foreground "#61CE3C"))))
@@ -176,13 +171,6 @@
  '(ediff-odd-diff-A ((((class color) (background dark)) (:background "dark green"))))
  '(ediff-odd-diff-B ((((class color) (background dark)) (:background "dark red"))))
  '(ediff-even-diff-B ((((class color) (background dark)) (:background "dark red"))))
-; '(ediff-current-diff-B ((((class color)) (:background "white"))))
-; '(ediff-even-diff-A ((((class color)) nil)))
-; '(ediff-even-diff-B ((((class color)) nil)))
-; '(ediff-fine-diff-A ((((class color)) (:background "cyan"))))
-; '(ediff-fine-diff-B ((((class color)) (:background "cyan"))))
-; '(ediff-odd-diff-A ((((class color)) nil)))
-; '(ediff-odd-diff-B ((((class color)) nil)))
  )
 
 (provide 'watcher)
