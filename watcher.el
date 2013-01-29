@@ -46,6 +46,7 @@
      (gui-element ((t (:background "#333333" :foreground "#96CBFE"))))
      (region ((t ( :background "#7F073F"))))
      (mode-line ((t (:background "#442220" :foreground "#ff6444"))))
+     (linum ((t (:background: "#333333" :foreground "#557755"))))
      (mode-line-inactive ((t (:background "#111111" :foreground "#444444"))))
 
      (highlight ((t (:background "DarkOrange"))))
@@ -155,22 +156,22 @@
      (markdown-pre-face ((t (:foreground "#4c83ff"))))
      (markdown-inline-code-face ((t (:foreground "#4c83ff"))))
      (markdown-list-face ((t (:foreground "#8B8989"))))
+     )
+   )
 
 
 
+  (custom-set-faces
 
+   ;;nXhtml colours
+   '(mumamo-background-chunk-major ((((class color) (background dark)) (:background "black"))))
+   '(mumamo-background-chunk-submode1 ((((class color) (background dark)) (:background "black"))))
 
-     (custom-set-faces
-
-      ;;nXhtml colours
-      '(mumamo-background-chunk-major ((((class color) (background dark)) (:background "black"))))
-      '(mumamo-background-chunk-submode1 ((((class color) (background dark)) (:background "black"))))
-
-      ;;ediff
-      '(ediff-even-diff-A ((((class color) (background dark)) (:background "dark green"))))
-      '(ediff-odd-diff-A ((((class color) (background dark)) (:background "dark green"))))
-      '(ediff-odd-diff-B ((((class color) (background dark)) (:background "dark red"))))
-      '(ediff-even-diff-B ((((class color) (background dark)) (:background "dark red"))))
-      ))))
+   ;;ediff
+   '(ediff-even-diff-A ((((class color) (background dark)) (:background "dark green"))))
+   '(ediff-odd-diff-A ((((class color) (background dark)) (:background "dark green"))))
+   '(ediff-odd-diff-B ((((class color) (background dark)) (:background "dark red"))))
+   '(ediff-even-diff-B ((((class color) (background dark)) (:background "dark red"))))
+   ))
 
 (provide 'watcher)
