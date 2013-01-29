@@ -1,7 +1,7 @@
 ;; Watcher Color Theme
 ;;
 ;; Inspired by Darcula from intelliJ Idea 12 and Cyberpunk from Sam Aaron.
-;; 
+;;
 ;;
 
 (require 'color-theme)
@@ -45,7 +45,7 @@
 
      (gui-element ((t (:background "#333333" :foreground "#96CBFE"))))
      (region ((t ( :background "#7F073F"))))
-     (mode-line ((t (:background "#4c83ff" :foreground "#222222"))))
+     (mode-line ((t (:background "#442220" :foreground "#ff6444"))))
      (mode-line-inactive ((t (:background "#111111" :foreground "#444444"))))
 
      (highlight ((t (:background "DarkOrange"))))
@@ -54,7 +54,7 @@
      (lazy-highlight ((t (:background "#555555" :foreground "#ff6444"))))
      (query-replace ((t (:background "#444444"))))
      (Highline-face ((t (:background "SeaGreen"))))
-     (hl-line ((t (:background "#442220"))))
+     (hl-line ((t (:background "#333333"))))
      (italic ((t (nil))))
      (left-margin ((t (nil))))
      (text-cursor ((t (:background "yellow" :foreground "black"))))
@@ -155,22 +155,22 @@
      (markdown-pre-face ((t (:foreground "#4c83ff"))))
      (markdown-inline-code-face ((t (:foreground "#4c83ff"))))
      (markdown-list-face ((t (:foreground "#8B8989"))))
-     ))
-  )
 
 
 
-(custom-set-faces
 
- ;;nXhtml colours
- '(mumamo-background-chunk-major ((((class color) (background dark)) (:background "black"))))
- '(mumamo-background-chunk-submode1 ((((class color) (background dark)) (:background "black"))))
 
- ;;ediff
- '(ediff-even-diff-A ((((class color) (background dark)) (:background "dark green"))))
- '(ediff-odd-diff-A ((((class color) (background dark)) (:background "dark green"))))
- '(ediff-odd-diff-B ((((class color) (background dark)) (:background "dark red"))))
- '(ediff-even-diff-B ((((class color) (background dark)) (:background "dark red"))))
- )
+     (custom-set-faces
+
+      ;;nXhtml colours
+      '(mumamo-background-chunk-major ((((class color) (background dark)) (:background "black"))))
+      '(mumamo-background-chunk-submode1 ((((class color) (background dark)) (:background "black"))))
+
+      ;;ediff
+      '(ediff-even-diff-A ((((class color) (background dark)) (:background "dark green"))))
+      '(ediff-odd-diff-A ((((class color) (background dark)) (:background "dark green"))))
+      '(ediff-odd-diff-B ((((class color) (background dark)) (:background "dark red"))))
+      '(ediff-even-diff-B ((((class color) (background dark)) (:background "dark red"))))
+      ))))
 
 (provide 'watcher)
