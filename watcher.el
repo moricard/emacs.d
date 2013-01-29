@@ -61,7 +61,7 @@
      (text-cursor ((t (:background "yellow" :foreground "black"))))
      (toolbar ((t (nil))))
      (underline ((nil (:underline nil))))
-     (vertical-border ((t (:background "black" :foreground "#333333"))))
+     (vertical-border ((t (:background "#222222" :foreground "#333333"))))
 
      (diff-added ((t (:foreground "#669966"))))
      (diff-removed ((t (:foreground "red4"))))
