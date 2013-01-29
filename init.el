@@ -39,13 +39,13 @@
 
 ;; Visual
 (require 'appearance)
-(eval-after-load 'color-theme (color-theme-cyberpunk))
+(eval-after-load 'color-theme (color-theme-watcher))
 
-(require 'magit)
-(require 'paredit)
-(require 'undo-tree)
-(require 'clojure-mode)
-(require 'nrepl)
+;;(require 'magit)
+;;(require 'paredit)
+;;(require 'undo-tree)
+;;(require 'clojure-mode)
+;;(require 'nrepl)
 
 ;; Setup
 (require 'default-behavior)
