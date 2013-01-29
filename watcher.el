@@ -14,7 +14,7 @@
    '(color-theme-watcher
      ((background-color . "#222222")
       (background-mode . dark)
-      (border-color . "black")
+      (border-color . "#222222")
       (cursor-color . "#96CBFE")
       (foreground-color . "#cccccc")
       (mouse-color . "sienna1"))
@@ -45,9 +45,9 @@
 
      (gui-element ((t (:background "#333333" :foreground "#96CBFE"))))
      (region ((t ( :background "#7F073F"))))
-     (mode-line ((t (:background "#442220" :foreground "#ff6444"))))
+     (mode-line ((t (:background "#151515" :foreground "#66cc66"))))
      (linum ((t (:background: "#333333" :foreground "#557755"))))
-     (mode-line-inactive ((t (:background "#111111" :foreground "#444444"))))
+     (mode-line-inactive ((t (:background "#222222" :foreground "#444444"))))
 
      (highlight ((t (:background "DarkOrange"))))
      (isearch ((t (:background "deep pink" :foreground "black"))))
