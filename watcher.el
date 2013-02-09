@@ -26,6 +26,9 @@
      (border-glyph ((t (nil))))
      (buffers-tab ((t (:background "#0C1021" :foreground "#F8F8F8"))))
 
+     (js2-function-param ((t (:foreground "#cc66ff"))))
+     (js2-external-variable ((t (:foreground "#ccff66"))))
+     
 
      (font-lock-builtin-face ((t (:foreground "#ccff66"))))
      (font-lock-comment-face ((t (:italic t :foreground "#669966"))))
@@ -175,3 +178,4 @@
    ))
 
 (provide 'watcher)
+

@@ -12,9 +12,6 @@
 (when window-system
   (setq frame-title-format '(buffer-file-name "%f" ("%b"))))
 
-;; curent line color
-(set-face-background 'hl-line "#202020")
-
 ;; Highlight hex colors
 ;;https://groups.google.com/forum/?fromgroups=#!topic/gnu.emacs.help/EQTSiulnbAo
 
