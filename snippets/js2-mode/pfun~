@@ -1,0 +1,15 @@
+# -*- mode: snippet -*-
+# name: pfun
+# key: pfun
+# --
+/**
+ * ${1:$(capitalize (un-camelcase-string text " " 1))}
+ * ${2:$(mapconcat 'identity 
+           (mapcar (lambda (el)
+                     (concat "@param " el)) 
+                   (split-string text ", "))
+           "\n* ")}
+*/
+function ${1:name} ( ${2:args} ) {
+    $0
+}

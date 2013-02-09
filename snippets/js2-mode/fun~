@@ -1,0 +1,6 @@
+# name: function ( args ) { }
+# key: fun
+# --
+function ${name} ( ${args} ) {
+    ${content}
+}

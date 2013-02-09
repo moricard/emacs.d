@@ -1,0 +1,18 @@
+# -*- mode: snippet -*-
+# name: def
+# key: def
+# expand-env:       
+# --
+define (
+    [${1:$(mapconcat 'identity 
+           (mapcar (lambda (el)
+                     (concat "'" (if (< 0 (string-width el)) (require-def-mirror el)) "'")) 
+                   (split-string text ", "))
+           "\n    ,"
+           )}
+    ],
+
+function ( ${1:$$()} ) {
+    $0
+}
+);

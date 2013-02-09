@@ -1,0 +1,39 @@
+# -*- mode: snippet -*-
+# name: def
+# key: def
+# expand-env:
+    (defun un-camelcase-string (s &optional sep start)
+      (let ((case-fold-search nil))
+        (while (string-match "[A-Z]" s (or start 1))
+          (setq s (replace-match (concat (or sep "-") 
+                                                 (downcase (match-string 0 s))) 
+                                         t nil s)))
+        (downcase s)))
+
+(defun prepend-view (s)  
+  (if (string-match "-view" s 0)
+      (concat "views/" (substring s 0 (string-match "-view" s 0)))
+      s
+))
+
+(defun prepend-collection (s)
+  (if (string-match "[s]$" s 0)
+      (concat "collections/" (substring s 0 (string-match "-view" s 0)))
+    s ))
+       
+# --
+define (
+    [${1:$(replace-regexp-in-string "[$]" "jquery" 
+(replace-regexp-in-string "[_]" "underscore"
+(mapconcat 'identity 
+           (mapcar (lambda (el)
+                     (concat "'" (if (< 0 (string-width el)) (prepend-collection (prepend-view (un-camelcase-string el "-" 1)))) "'")) 
+                   (split-string text ", "))
+           "\n    ,"
+           )))}
+    ],
+
+function ( ${1:$$()} ) {
+    $0
+}
+);
