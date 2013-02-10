@@ -56,6 +56,9 @@
 (defvar require-mode-map (make-sparse-keymap)
   "require-mode keymap")
 
+(define-key require-mode-map
+  (kbd "C-c ri") 'require-import)
+
 (define-minor-mode require-mode
   "Require mode" nil " requireJS" require-mode-map)
 

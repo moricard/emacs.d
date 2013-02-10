@@ -1,4 +1,5 @@
 (require 'js2-mode)
+(require 'require-mode)
 (setq-default js2-allow-rhino-new-expr-initializer nil)
 (setq-default js2-auto-indent-p nil)
 (setq-default js2-enter-indents-newline nil)
@@ -114,5 +115,9 @@
 
 (autoload 'js2-mode "js2-mode" nil t)
 (add-to-list 'auto-mode-alist '("\\.js$" . js2-mode))
+
+(add-hook 'js2-mode-hook
+          (lambda ()
+            (require-mode)))
 
 (provide 'setup-js2-mode)
