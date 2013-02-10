@@ -18,6 +18,13 @@
   (backward-char 2)
 )
 
+(defun camelize (s)
+      "Convert under_score string S to CamelCase string."
+      (mapconcat 'identity (mapcar
+                            '(lambda (word) (capitalize (downcase word)))
+                            (split-string s "-")) ""))
+
+
 (defun require-import ()
   "add import to require header"
   (interactive)
@@ -29,7 +36,7 @@
       (if (setq index (string-match "views[/.]*[/]" import))
           (setq import (substring import index))
         (if (setq index (string-match "templates[/.]*[/]" import))
-            (setq import (substring import index))
+            (setq import (concat "text!" (substring import index)))
           (setq index (string-match "[a-z]+[\.]js$" import))
           (setq import (substring import index))))))
   (message (concat "Adding " import " to dependencies."))
@@ -40,7 +47,7 @@
              ",'" (substring import 0 (string-match ".js$" import)) "'\n    "))
     (require-goto-headers-declaration)
     (insert (concat
-             ", " (capitalize (substring import (string-match "[a-z]+[.]" import) (string-match "[.]" import)))))))
+             ", " (camelize (substring import (string-match "[a-z-]+[.]" import) (string-match "[.]" import)))))))
 
 
 (defvar require-mode-map (make-sparse-keymap)
