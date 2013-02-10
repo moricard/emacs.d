@@ -39,7 +39,6 @@
             (setq import (concat "text!" (substring import index)))
           (setq index (string-match "[a-z]+[\.]js$" import))
           (setq import (substring import index))))))
-  (message (concat "Adding " import " to dependencies."))
 
   (save-excursion 
     (require-goto-dependency-insert-point)
@@ -47,7 +46,11 @@
              ",'" (substring import 0 (string-match ".js$" import)) "'\n    "))
     (require-goto-headers-declaration)
     (insert (concat
-             ", " (camelize (substring import (string-match "[a-z-]+[.]" import) (string-match "[.]" import)))))))
+             ", " (camelize (substring import 
+                                       (string-match "[a-z-]+[.]" import) 
+                                       (string-match "[.]" import))))))
+  (message (concat "Adding " import " to dependencies."))
+)
 
 
 (defvar require-mode-map (make-sparse-keymap)

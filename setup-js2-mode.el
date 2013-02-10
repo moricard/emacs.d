@@ -45,7 +45,7 @@
 (font-lock-add-keywords
  'js2-mode `(("function *([^)]*) *{ *\\(return\\) "
               (0 (progn (compose-region (match-beginning 1)
-                                        (match-end 1) "\u2190")
+                                        (match-end 1) "\u27F6")
                         nil)))))
 
 ;; After js2 has parsed a js file, we look for jslint globals decl comment ("/* global Fred, _, Harry */") and
@@ -111,5 +111,8 @@
                     (:else 0)))))
     (unless first-line
       (indent-line-to offset))))
+
+(autoload 'js2-mode "js2-mode" nil t)
+(add-to-list 'auto-mode-alist '("\\.js$" . js2-mode))
 
 (provide 'setup-js2-mode)

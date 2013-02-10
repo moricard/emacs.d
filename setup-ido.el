@@ -7,8 +7,9 @@
       ido-case-fold nil
       ido-auto-merge-work-directories-length -1
       ido-create-new-buffer 'always
-      ido-use-filename-at-point nil
-      ido-max-prospects 10)
+      ido-use-filename-at-point 'guess
+      ido-max-prospects 10
+      ido-everywhere t)
 
 (add-hook
  'ido-setup-hook

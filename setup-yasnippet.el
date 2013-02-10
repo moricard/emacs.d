@@ -10,7 +10,7 @@
 (defun require-def-mirror (s)
   (setq s (un-camelcase-string s))
   (if (string-match "-view" s 0)
-      (concat "views/" (substring s 0 (- (string-width s) 5)))
+      (concat "views/" s)
     (if (string-match "[s]$" s 0)
         (concat "collections/" s)
       (if (string-match "-model" s 0)

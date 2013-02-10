@@ -45,7 +45,7 @@
 
 ;; Undo tree is more powerful
 (require 'undo-tree)
-(global-undo-tree-mode) 
+(global-undo-tree-mode)
 
 ;;(require 'clojure-mode)
 ;;(require 'nrepl)
