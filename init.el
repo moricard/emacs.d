@@ -32,7 +32,8 @@
       'nrepl
       'ido-ubiquitous
       'ace-jump-mode
-      'js2-mode)
+      'js2-mode
+      'markdown-mode)
 
 (require 'setup-yasnippet)
 

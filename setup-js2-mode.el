@@ -1,5 +1,5 @@
 (require 'js2-mode)
-(require 'require-mode)
+(require 'requirejs-mode)
 (setq-default js2-allow-rhino-new-expr-initializer nil)
 (setq-default js2-auto-indent-p nil)
 (setq-default js2-enter-indents-newline nil)
@@ -118,6 +118,6 @@
 
 (add-hook 'js2-mode-hook
           (lambda ()
-            (require-mode)))
+            (requirejs-mode)))
 
 (provide 'setup-js2-mode)
