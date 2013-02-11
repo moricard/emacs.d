@@ -33,7 +33,8 @@
       'ido-ubiquitous
       'ace-jump-mode
       'js2-mode
-      'markdown-mode)
+      'markdown-mode
+      'scala-mode)
 
 (require 'setup-yasnippet)
 

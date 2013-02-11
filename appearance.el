@@ -2,6 +2,17 @@
 (require 'cyberpunk)
 (require 'watcher)
 
+
+;; Add column marker
+(require 'fill-column-indicator)
+(setq-default fci-rule-column 80)
+(setq fci-rule-width 1)
+(setq fci-rule-color "#333333")
+
+(define-globalized-minor-mode global-fci-mode fci-mode (lambda () (fci-mode t)))
+(global-fci-mode t)
+
+
 (global-hl-line-mode 1) ;; Highlight current line
 (show-paren-mode 1)     ;; Parentheses highlight
 (menu-bar-mode -1)      ;; No menu
