@@ -1,0 +1,10 @@
+# -*- mode: snippet -*-
+# name: Handlebars.registerHelper('', f());
+# key: hrh
+# --
+
+Handlebars.registerHelper('$1', function($2) {
+    var result = "";
+    $0
+    return new Handlebars.SafeString( result );
+});
