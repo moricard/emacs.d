@@ -191,8 +191,8 @@
 (global-set-key (kbd "C-x C-b") 'ibuffer)
 
 ;; Window switching.
-(global-set-key (kbd "C-x O") (lambda () (interactive) (other-window -1))) ;; back one
-(global-set-key (kbd "C-x C-o") (lambda () (interactive) (other-window 2))) ;; forward two
+;;(global-set-key (kbd "C-x O") (lambda () (interactive) (other-window -1))) ;; back one
+;;(global-set-key (kbd "C-x C-o") (lambda () (interactive) (other-window 2))) ;; forward two
 
 ;; If you want to be able to M-x without meta
 (global-set-key (kbd "C-x C-m") 'execute-extended-command)
@@ -200,6 +200,10 @@
 ;; Magit
 (require 'magit)
 (global-set-key (kbd "C-x g") 'magit-status)
+
+;; Monky
+(require 'monky)
+(global-set-key (kbd "C-x C-g") 'monky-status)
 
 ;; Activate occur easily inside isearch
 (define-key isearch-mode-map (kbd "C-o")
