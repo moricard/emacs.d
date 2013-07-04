@@ -32,6 +32,7 @@
       'nrepl
       'ido-ubiquitous
       'ace-jump-mode
+      'requirejs-mode
       'js2-mode
       'markdown-mode
       'scala-mode)
