@@ -4,3 +4,6 @@
 [submodule "modules/yasnippet"]
 	path = modules/yasnippet
 	url = git://github.com/capitaomorte/yasnippet.git
+[submodule "modules/monky"]
+	path = modules/monky
+	url = git@github.com:ananthakumaran/monky.git
