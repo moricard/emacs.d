@@ -67,6 +67,7 @@
 (require 'default-behavior)
 (require 'setup-ido)
 (require 'setup-js2-mode)
+(require 'setup-elisp)
 
 (require 'bindings)
 (custom-set-variables

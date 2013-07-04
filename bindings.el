@@ -220,6 +220,6 @@
 ;(define-key nrepl-mode-map (kbd "M-RET") 'nrepl-doc)
 ;(define-key nrepl-interaction-mode-map (kbd "M-RET") 'nrepl-doc)
 
-(global-set-key (kbd "C-x o") 'win-switch-dispatch)
+;;(global-set-key (kbd "C-x o") 'win-switch-dispatch)
 
 (provide 'bindings)

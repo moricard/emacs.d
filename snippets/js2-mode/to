@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: this.on(event, callback);
+# key: to
+# --
+this.on('$1', this.$2);$0
