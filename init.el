@@ -35,7 +35,8 @@
       'requirejs-mode
       'js2-mode
       'markdown-mode
-      'scala-mode)
+      'scala-mode
+      'haskell-mode)
 
 (require 'setup-yasnippet)
 
