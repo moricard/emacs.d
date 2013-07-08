@@ -3,6 +3,9 @@
 ;; No Splash
 (setq inhibit-startup-message t)
 
+;; Font
+(set-face-attribute 'default nil :font "DejaVu Sans Mono:pixelsize=12:antialias=true")
+
 ;; Files and Directories
 (setq site-lisp-dir
       (expand-file-name "site-lisp" user-emacs-directory))
