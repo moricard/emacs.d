@@ -17,6 +17,9 @@
       (message "%s" file)
       (delete-file file))))
 
+;; Delete trailing whitespace when saving
+(add-hook 'before-save-hook 'delete-trailing-whitespace)
+
 
 ;; Allow pasting selection outside of Emacs
 (setq x-select-enable-clipboard t)
@@ -42,7 +45,7 @@
 (set-terminal-coding-system  'utf-8)
 (set-keyboard-coding-system  'utf-8)
 (set-selection-coding-system 'utf-8)
-(prefer-coding-system	     'utf-8) 	 
+(prefer-coding-system	     'utf-8)
 
 ;; Show active region
 (transient-mark-mode 1)

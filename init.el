@@ -50,6 +50,10 @@
 ;;(require 'magit)
 ;;(require 'paredit)
 
+;;haskell setup
+(custom-set-variables
+     '(haskell-mode-hook '(turn-on-haskell-indentation)))
+
 ;; Undo tree is more powerful
 (require 'undo-tree)
 (global-undo-tree-mode)
