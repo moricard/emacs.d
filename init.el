@@ -10,8 +10,8 @@
 (setq site-lisp-dir
       (expand-file-name "site-lisp" user-emacs-directory))
 
-(setq modules-dir 
-      (file-name-directory 
+(setq modules-dir
+      (file-name-directory
        (concat user-emacs-directory "modules/")))
 
 (dolist (module (directory-files modules-dir t "[^.]"))
@@ -28,7 +28,7 @@
 (lazy-install
       'yasnippet
       'color-theme
-      'magit 	
+      'magit
       'paredit
       'undo-tree
       'clojure-mode
@@ -39,7 +39,8 @@
       'js2-mode
       'markdown-mode
       'scala-mode
-      'haskell-mode)
+      'haskell-mode
+      'less-css-mode)
 
 (require 'setup-yasnippet)
 
