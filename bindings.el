@@ -132,8 +132,13 @@
 ;;use delete-horizontal-space to completely nuke all whitespace
 (global-set-key (kbd "M-SPC ")   'live-delete-whitespace-except-one)
 
+;; vim like navigation
+(global-set-key (kbd "M-h") 'backward-char)
+(global-set-key (kbd "M-j") 'next-line)
+(global-set-key (kbd "M-k") 'previous-line)
+(global-set-key (kbd "M-l") 'forward-char)
 ;;redefine help shortcut
-(global-set-key (kbd "M-h") 'help-command)
+;;(global-set-key (kbd "M-h") 'help-command)
 
 ;;allow the deletion of words:
 ;;backward kill word (forward kill word is M-d)
@@ -142,7 +147,7 @@
 ;(define-key paredit-mode-map (kbd "C-]") 'paredit-backward-kill-word)
 
 ;;kill line backwards
-(global-set-key (kbd "M-k") 'live-backwards-kill-line)
+;;(global-set-key (kbd "M-k") 'live-backwards-kill-line)
 
 ;;kill regions
 (global-set-key (kbd "C-x C-k") 'kill-region)
