@@ -26,6 +26,7 @@
 ;; Packages/modules
 (require 'setup-packages)
 (lazy-install
+      'edit-server
       'yasnippet
       'color-theme
       'magit
@@ -42,18 +43,32 @@
       'haskell-mode
       'less-css-mode)
 
+;; Serveur pour editer avec emacs les text-edits dans chrome
+(require 'edit-server)
+(setq edit-server-new-frame 1)
+(edit-server-start)
+
+
 (require 'setup-yasnippet)
 
 ;; Visual
 (require 'appearance)
 (eval-after-load 'color-theme (color-theme-watcher))
 
-;;(require 'magit)
-;;(require 'paredit)
+(require 'magit)
+(require 'paredit)
 
 ;;haskell setup
 (custom-set-variables
-     '(haskell-mode-hook '(turn-on-haskell-indentation)))
+ ;; custom-set-variables was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(haskell-mode-hook (quote (turn-on-haskell-indentation)))
+ '(js2-basic-offset 2)
+ '(js2-bounce-indent-p nil)
+ '(safe-local-variable-values (quote ((encoding . utf-8))))
+ '(send-mail-function (quote mailclient-send-it)))
 
 ;; Undo tree is more powerful
 (require 'undo-tree)
@@ -70,8 +85,8 @@
 
 (setq monky-process-type 'cmdserver)
 
-;;(require 'clojure-mode)
-;;(require 'nrepl)
+(require 'clojure-mode)
+(require 'nrepl)
 
 ;; Setup
 (require 'default-behavior)
@@ -80,12 +95,7 @@
 (require 'setup-elisp)
 
 (require 'bindings)
-(custom-set-variables
- ;; custom-set-variables was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- '(send-mail-function (quote mailclient-send-it)))
+
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
@@ -100,3 +110,4 @@
 
 ;; Start emacs server
 (server-start)
+(put 'downcase-region 'disabled nil)
