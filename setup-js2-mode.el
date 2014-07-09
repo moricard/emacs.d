@@ -1,4 +1,5 @@
 (require 'js2-mode)
+(require 'ac-js2)
 (require 'requirejs-mode)
 (setq-default js2-allow-rhino-new-expr-initializer nil)
 (setq-default js2-auto-indent-p nil)
@@ -17,8 +18,8 @@
   (cleanup-buffer))
 
 ;; sensible defaults for indentation
-(custom-set-variables  
- '(js2-basic-offset 2)  
+(custom-set-variables
+ '(js2-basic-offset 2)
  '(js2-bounce-indent-p nil))
 
 ;; js2-mode steals TAB, let's steal it back for yasnippet
@@ -123,5 +124,7 @@
 (add-hook 'js2-mode-hook
           (lambda ()
             (requirejs-mode)))
+
+(add-hook 'js2-mode-hook 'ac-js2-mode)
 
 (provide 'setup-js2-mode)

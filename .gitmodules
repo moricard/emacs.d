@@ -7,3 +7,6 @@
 [submodule "modules/monky"]
 	path = modules/monky
 	url = git@github.com:ananthakumaran/monky.git
+[submodule "modules/wooky"]
+	path = modules/wooky
+	url = git@github.com:katspaugh/wooky.el.git

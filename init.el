@@ -25,29 +25,59 @@
 
 ;; Packages/modules
 (require 'setup-packages)
-(lazy-install
-      'edit-server
-      'yasnippet
-      'color-theme
-      'magit
-      'paredit
-      'undo-tree
-      'clojure-mode
-      'nrepl
-      'ido-ubiquitous
-      'ace-jump-mode
-      'requirejs-mode
-      'js2-mode
-      'markdown-mode
-      'scala-mode
-      'haskell-mode
-      'less-css-mode)
+(lazy-install 'malabar-mode
+              'edit-server
+              'yasnippet
+              'color-theme
+              'magit
+              'paredit
+              'undo-tree
+              'clojure-mode
+              'nrepl
+              'ido-ubiquitous
+              'ace-jump-mode
+              'requirejs-mode
+              'js2-mode
+              'markdown-mode
+              'scala-mode
+              'haskell-mode
+              'less-css-mode)
+
+
+;; Evaluate code in the browser
+(require 'wooky)
+
 
 ;; Serveur pour editer avec emacs les text-edits dans chrome
 (require 'edit-server)
 (setq edit-server-new-frame 1)
 (edit-server-start)
 
+;; Mode java
+(require 'cedet)
+(require 'semantic)
+(load "semantic/loaddefs.el")
+(semantic-mode 1);;
+(require 'malabar-mode)
+(add-to-list 'auto-mode-alist '("\\.java\\'" . malabar-mode))
+
+;; Auto-complete
+(require 'auto-complete)
+(require 'auto-complete-config)
+
+(add-to-list 'ac-dictionary-directories "~/.emacs.d/elpa/auto-complete-20140414.2324/ac-dict")
+
+(ac-config-default)
+
+(set-default 'ac-sources
+             '(ac-source-abbrev
+               ac-source-dictionary
+               ac-source-yasnippet
+               ac-source-words-in-buffer
+               ac-source-words-in-same-mode-buffers
+               ac-source-semantic))
+
+(add-hook 'malabar-mode-hook 'auto-complete-mode)
 
 (require 'setup-yasnippet)
 
@@ -93,6 +123,11 @@
 (require 'setup-ido)
 (require 'setup-js2-mode)
 (require 'setup-elisp)
+
+;; Setup less mode
+(add-hook 'css-mode-hook
+          '(lambda ()
+             (setq css-indent-offset 2)))
 
 (require 'bindings)
 
