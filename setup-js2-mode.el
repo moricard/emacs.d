@@ -1,6 +1,4 @@
 (require 'js2-mode)
-(require 'ac-js2)
-(require 'requirejs-mode)
 (setq-default js2-allow-rhino-new-expr-initializer nil)
 (setq-default js2-auto-indent-p nil)
 (setq-default js2-enter-indents-newline nil)

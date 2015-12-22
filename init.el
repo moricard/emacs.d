@@ -25,7 +25,7 @@
 
 ;; Packages/modules
 (require 'setup-packages)
-(lazy-install 'malabar-mode
+(lazy-install
               'edit-server
               'yasnippet
               'color-theme
@@ -33,10 +33,8 @@
               'paredit
               'undo-tree
               'clojure-mode
-              'nrepl
               'ido-ubiquitous
               'ace-jump-mode
-              'requirejs-mode
               'js2-mode
               'markdown-mode
               'scala-mode
@@ -45,7 +43,7 @@
 
 
 ;; Evaluate code in the browser
-(require 'wooky)
+;; (require 'wooky)
 
 
 ;; Serveur pour editer avec emacs les text-edits dans chrome
@@ -58,26 +56,26 @@
 (require 'semantic)
 (load "semantic/loaddefs.el")
 (semantic-mode 1);;
-(require 'malabar-mode)
-(add-to-list 'auto-mode-alist '("\\.java\\'" . malabar-mode))
+;;(require 'malabar-maode)
+;;(add-to-list 'auto-mode-alist '("\\.java\\'" . malabar-mode))
 
 ;; Auto-complete
-(require 'auto-complete)
-(require 'auto-complete-config)
+;;(require 'auto-complete)
+;;(require 'auto-complete-config)
 
-(add-to-list 'ac-dictionary-directories "~/.emacs.d/elpa/auto-complete-20140414.2324/ac-dict")
+;;(add-to-list 'ac-dictionary-directories "~/.emacs.d/elpa/auto-complete-20140414.2324/ac-dict")
 
-(ac-config-default)
+;;(ac-config-default)
 
-(set-default 'ac-sources
-             '(ac-source-abbrev
-               ac-source-dictionary
-               ac-source-yasnippet
-               ac-source-words-in-buffer
-               ac-source-words-in-same-mode-buffers
-               ac-source-semantic))
+;;(set-default 'ac-sources
+;;             '(ac-source-abbrev
+;;               ac-source-dictionary
+;;               ac-source-yasnippet
+;;               ac-source-words-in-buffer
+;;               ac-source-words-in-same-mode-buffers
+;;               ac-source-semantic))
 
-(add-hook 'malabar-mode-hook 'auto-complete-mode)
+;;(add-hook 'malabar-mode-hook 'auto-complete-mode)
 
 (require 'setup-yasnippet)
 
@@ -116,7 +114,7 @@
 (setq monky-process-type 'cmdserver)
 
 (require 'clojure-mode)
-(require 'nrepl)
+;; (require 'nrepl)
 
 ;; Setup
 (require 'default-behavior)
