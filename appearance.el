@@ -5,7 +5,7 @@
 
 ;; Add column marker
 (require 'fill-column-indicator)
-(setq-default fci-rule-column 80)
+(setq-default fci-rule-column 100)
 (setq fci-rule-width 1)
 (setq fci-rule-color "#333333")
 
